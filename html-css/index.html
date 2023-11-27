@@ -29,9 +29,9 @@
           extend: {
             width: {
               desktop: "1120px",
-              tablet: '680px',
-              mobile: '361px',
-              menu: '330px'
+              tablet: "680px",
+              mobile: "361px",
+              menu: "330px",
             },
             colors: {
               black: "#161616",
@@ -50,11 +50,15 @@
       }
     </style>
   </head>
-  <body class="bg-white flex justify-center text-black box-border">
+  <body class="bg-white flex flex-col items-center text-black">
     <!-- Cabeçalho -->
-    <header class="flex flex-col justify-center items-center pt-10 pb-4 w-mobile md:w-tablet lg:w-desktop">
+    <header
+      class="flex flex-col justify-center items-center md:items-start pt-10 pb-4 w-mobile md:w-tablet lg:w-desktop"
+    >
       <!-- Primeira seção -->
-      <div class="flex flex-col flex-wrap md:flex-row justify-between items-center mb-6 lg:mb-10">
+      <div
+        class="flex flex-col w-full flex-wrap md:flex-row lg:flex-nowrap justify-between items-center mb-6 lg:mb-10"
+      >
         <!-- Logo -->
         <img src="./images/logo.svg" class="w-64 h-7" />
 
@@ -71,17 +75,20 @@
             </button>
           </form>
         </div>
-        
 
         <!-- Contatos da empresa -->
-        <address class="mt-8 md:mt-0font-medium text-sm not-italic text-center">
+        <address
+          class="mt-8 md:mt-0font-medium text-sm not-italic text-center lg:order-2"
+        >
           <div class="flex flex-row mb-3">
             <div class="mr-4">
               <img
                 src="./images/icons/phone.svg"
                 class="w-3.5 h-3.5 inline mr-1"
               />
-              <a target="tel:+55 (82) 3316-6531" class="align-middle">(82) 3316-6531</a>
+              <a target="tel:+55 (82) 3316-6531" class="align-middle"
+                >(82) 3316-6531</a
+              >
             </div>
             <img src="./images/icons/divider.svg" />
             <div class="text-center ml-4">
@@ -89,13 +96,17 @@
                 src="./images/icons/whatsapp.svg"
                 class="w-4 h-4 inline mr-1"
               />
-              <a target="tel:+55 (82) 9 9316-5234" class="align-middle">(82) 9 9316-5234</a>
+              <a target="tel:+55 (82) 9 9316-5234" class="align-middle"
+                >(82) 9 9316-5234</a
+              >
             </div>
           </div>
 
           <div>
             <img src="./images/icons/target.svg" class="w-3 h-4 inline mr-2" />
-            <a target="mail:" class="align-middle">Av. Muniz Falcão, 2** B Maceió - AL</a>
+            <a target="mail:" class="align-middle"
+              >Av. Muniz Falcão, 2** B Maceió - AL</a
+            >
           </div>
           <div></div>
         </address>
@@ -103,9 +114,13 @@
 
       <!-- Segunda seção -->
       <!-- Menu de navegação tablet e smartphone -->
-      <button class="bg-blue w-menu text-left inline box-border px-4 py-3">
+      <button
+        class="lg:hidden bg-blue w-menu text-left inline box-border px-4 py-3"
+      >
         <img src="./images/icons/menu.svg" class="h-5 mr-6 inline" />
-        <span class="text-whitebg font-semibold text-base align-middle">Menu</span>
+        <span class="text-whitebg font-semibold text-base align-middle"
+          >Menu</span
+        >
       </button>
 
       <!-- Barra de navegação desktop -->
@@ -133,7 +148,50 @@
     </header>
 
     <!-- Conteúdo principal da pagina -->
-    <main></main>
+    <main class="w-screen">
+      <!-- Hero -->
+      <section
+        class="bg-[url('./images/hero/garden.png')] bg-cover bg-center h-[450px]"
+      >
+        <div
+          class="bg-[url('./images/filtro.png')] bg-cover bg-center h-full flex items-center justify-center"
+        >
+          <div
+            class="flex flex-nowrap items-center justify-between md:justify-normal px-2 md:px-0 w-screen md:w-auto"
+          >
+            <div class="text-whitebg md:mr-5 lg:mr-40">
+              <h2
+                class="text-base md:text-xl lg:text-2xl font-bold text-whitebg w-[200px] md:w-[340px] lg:w-[440px] mb-4"
+              >
+                Equipamentos de jardinagem
+              </h2>
+              <p
+                class="text-xs md:text-sm lg:text-base font-semibold leading-4 md:leading-5 w-[200px] md:w-[340px] lg:w-[440px] text-justify mb-4"
+              >
+                Ferramentas para controlar o crescimento de gramíneas: são
+                aparadores de grama, cortadores de grama, roçadeiras e
+                sopradores.
+              </p>
+              <button
+                class="text-xs md:text-sm lg:text-base font-semibold px-6 py-2 ring-2 ring-whitebg ring-inset"
+              >
+                Saiba mais
+              </button>
+            </div>
+            <div>
+              <img
+                src="./images/products/gardening/brushcutter-still.png"
+                class="h-[100px] md:h-[197px] lg:h-[244px] inline"
+              />
+              <img
+                src="./images/products/gardening/grass-cutter-trapp.png"
+                class="h-[84px] md:h-[168px] lg:h-[244px] inline -ml-14 md:-ml-20 lg:-ml-24 -mb-4 md:-mb-10 lg:-mb-6"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Rodapé -->
     <footer></footer>
