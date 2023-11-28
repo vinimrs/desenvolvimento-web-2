@@ -23,8 +23,8 @@
             graytext: "#C1C1C1",
           },
           fontFamily: {
-            display: ['"Kanit"', "sans-serif"],
-            sans: ['"Inter"', "sans-serif"],
+            display: ["Kanit", "sans-serif"],
+            sans: ["Inter", "sans-serif"],
           },
           extend: {
             width: {
@@ -40,6 +40,7 @@
         },
       };
     </script>
+    <!-- Estilo base -->
     <style type="text/tailwindcss">
       @layer utilities {
         *,
@@ -49,11 +50,15 @@
         }
       }
     </style>
+    <!-- Importação das fontes -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kanit:wght@400;600;700;800&display=swap");
+    </style>
   </head>
   <body class="bg-white flex flex-col items-center text-black">
     <!-- Cabeçalho -->
     <header
-      class="flex flex-col justify-center items-center md:items-start pt-10 pb-4 w-mobile md:w-tablet lg:w-desktop"
+      class="flex flex-col justify-center items-center md:items-start lg:items-center pt-10 pb-4 w-mobile md:w-tablet lg:w-desktop"
     >
       <!-- Primeira seção -->
       <div
@@ -157,16 +162,18 @@
           class="bg-[url('./images/filtro.png')] bg-cover bg-center h-full flex items-center justify-center"
         >
           <div
-            class="flex flex-nowrap items-center justify-between md:justify-normal px-2 md:px-0 w-screen md:w-auto"
+            class="flex flex-nowrap flex-col md:flex-row items-center justify-between md:justify-normal px-2 md:px-0 w-screen md:w-auto"
           >
-            <div class="text-whitebg md:mr-5 lg:mr-40">
+            <div
+              class="order-1 md:order-0 text-whitebg mt-8 md:mt-0 md:mr-5 lg:mr-40"
+            >
               <h2
-                class="text-base md:text-xl lg:text-2xl font-bold text-whitebg w-[200px] md:w-[340px] lg:w-[440px] mb-4"
+                class="text-base md:text-xl lg:text-2xl font-bold text-whitebg w-[280px] md:w-[340px] lg:w-[440px] mb-4"
               >
                 Equipamentos de jardinagem
               </h2>
               <p
-                class="text-xs md:text-sm lg:text-base font-semibold leading-4 md:leading-5 w-[200px] md:w-[340px] lg:w-[440px] text-justify mb-4"
+                class="text-xs md:text-sm lg:text-base font-semibold leading-4 md:leading-5 w-[280px] md:w-[340px] lg:w-[440px] text-justify mb-4"
               >
                 Ferramentas para controlar o crescimento de gramíneas: são
                 aparadores de grama, cortadores de grama, roçadeiras e
@@ -178,19 +185,138 @@
                 Saiba mais
               </button>
             </div>
-            <div>
+            <div class="order-0 md:order-1">
               <img
                 src="./images/products/gardening/brushcutter-still.png"
-                class="h-[100px] md:h-[197px] lg:h-[244px] inline"
+                class="h-[152px] md:h-[197px] lg:h-[244px] inline"
               />
               <img
                 src="./images/products/gardening/grass-cutter-trapp.png"
-                class="h-[84px] md:h-[168px] lg:h-[244px] inline -ml-14 md:-ml-20 lg:-ml-24 -mb-4 md:-mb-10 lg:-mb-6"
+                class="h-[124px] md:h-[168px] lg:h-[244px] inline -ml-8 md:-ml-20 lg:-ml-24 -mb-6 md:-mb-10 lg:-mb-6"
               />
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Conteúdos principais -->
+      <div class="w-screen flex justify-center">
+        <div
+          class="inline-flex flex-col flex-wrap gap-14 pt-14 w-mobile md:w-tablet lg:w-desktop"
+        >
+          <section>
+            <!-- Cabeçalho da seção -->
+            <header class="mb-10 md:w-[475px] lg:w-[600px]">
+              <h2
+                class="font-display text-xs md:text-base font-bold text-blue uppercase tracking-[0.3rem] pl-0.5 -mb-1.5"
+              >
+                Produtos
+              </h2>
+              <h1 class="font-display text-2xl md:text-3xl font-semibold">
+                Principais produtos
+              </h1>
+              <p class="text-xs md:text-base w-[290px] md:w-full">
+                Vendemos os produtos mais confiáveis para resolver suas
+                necessidades.
+              </p>
+            </header>
+            <!-- Lista de produtos -->
+            <div class="flex flex-nowrap pl-10 gap-4">
+              <!-- Produto -->
+              <div class="flex flex-col gap-4 pb-4 w-[240px]">
+                <img
+                  src="./images/products/gardening/grass-cutter-trapp-list.png"
+                  class="self-center h-[160px]"
+                />
+                <div class="flex gap-1.5">
+                  <button
+                    class="bg-whitebg text-blue font-bold text-xs px-4 py-[5px] rounded-lg hover:bg-blue hover:text-whitebg transition duration-50 ease-linear"
+                  >
+                    Jardim
+                  </button>
+                  <button
+                    class="bg-whitebg text-blue font-bold text-xs px-4 py-[5px] rounded-lg hover:bg-blue hover:text-whitebg transition duration-50 ease-linear"
+                  >
+                    Elétrico
+                  </button>
+                </div>
+                <h3 class="font-bold leading-5">
+                  Cortador de Grama Elétrico Trapp MC-50E
+                </h3>
+                <button
+                  class="self-center font-bold text-blue text-sm bg-transparent ring-2 ring-blue ring-inset px-20 py-3 rounded-xl hover:bg-blue hover:text-whitebg transition duration-50 ease-linear"
+                >
+                  Leia Mais
+                </button>
+              </div>
+              <div class="hidden md:flex flex-col gap-4 pb-4 w-[240px]">
+                <img
+                  src="./images/products/pumps/small-pump-schineider-list.png"
+                  class="self-center h-[160px]"
+                />
+                <div class="flex gap-1.5">
+                  <button
+                    class="bg-whitebg text-blue font-bold text-xs px-4 py-[5px] rounded-lg hover:bg-blue hover:text-whitebg transition duration-50 ease-linear"
+                  >
+                    Motobomba
+                  </button>
+                  <button
+                    class="bg-whitebg text-blue font-bold text-xs px-4 py-[5px] rounded-lg hover:bg-blue hover:text-whitebg transition duration-50 ease-linear"
+                  >
+                    Elétrico
+                  </button>
+                </div>
+                <h3 class="font-bold leading-5">
+                  Motobomba autoaspirante residencial ASP-98
+                </h3>
+                <button
+                  class="self-center font-bold text-blue text-sm bg-transparent ring-2 ring-blue ring-inset px-20 py-3 rounded-xl hover:bg-blue hover:text-whitebg transition duration-50 ease-linear"
+                >
+                  Leia Mais
+                </button>
+              </div>
+              <div class="hidden lg:flex flex-col gap-4 pb-4 w-[240px]">
+                <img
+                  src="./images/products/motor-pumps/submersible-motor-pump-schineider-list.png"
+                  class="self-center h-[160px]"
+                />
+                <div class="flex gap-1.5">
+                  <button
+                    class="bg-whitebg text-blue font-bold text-xs px-4 py-[5px] rounded-lg hover:bg-blue hover:text-whitebg transition duration-50 ease-linear"
+                  >
+                    Submersa
+                  </button>
+                  <button
+                    class="bg-whitebg text-blue font-bold text-xs px-4 py-[5px] rounded-lg hover:bg-blue hover:text-whitebg transition duration-50 ease-linear"
+                  >
+                    Elétrico
+                  </button>
+                </div>
+                <h3 class="font-bold leading-5">
+                  Motobomba Submersa Schineider SUB 50
+                </h3>
+                <button
+                  class="self-center font-bold text-blue text-sm bg-transparent ring-2 ring-blue ring-inset px-20 py-3 rounded-xl hover:bg-blue hover:text-whitebg transition duration-50 ease-linear"
+                >
+                  Leia Mais
+                </button>
+              </div>
+            </div>
+          </section>
+          <section>
+            <header>
+              <h2>Assistência</h2>
+              <h1>Nossas assistências técnicas</h1>
+              <p>
+                Oferecemos assistência técnica para as principais marcas do
+                mercado.
+              </p>
+            </header>
+
+            <div>conteudo</div>
+          </section>
+        </div>
+      </div>
     </main>
 
     <!-- Rodapé -->
