@@ -222,7 +222,7 @@
               </p>
             </header>
             <!-- Lista de produtos -->
-            <div class="flex flex-nowrap pl-10 gap-4">
+            <div class="flex flex-nowrap pl-10 gap-4 justify-center">
               <!-- Produto -->
               <div class="flex flex-col gap-4 pb-4 w-[240px]">
                 <img
@@ -322,8 +322,8 @@
               </p>
             </header>
             
-            <div class="flex gap-4">
-              <div class="hidden lg:flex flex-col gap-4 pb-4 w-[240px]">
+            <div class="flex gap-4 justify-center">
+              <div class="flex flex-col gap-4 pb-4 px-2 w-[240px]">
                 <img
                   src="./images/brands/schineider.svg"
                   class="self-center h-[160px]"
@@ -332,7 +332,7 @@
                 </div>
               </div>
             
-              <div class="hidden lg:flex flex-col gap-4 pb-4 w-[240px]">
+              <div class="hidden md:flex flex-col gap-4 pb-4 px-2 w-[240px]">
                 <img
                   src="./images/brands/buffalo.svg"
                   class="self-center h-[160px]"
@@ -341,7 +341,7 @@
                 </div>
               </div>
             
-              <div class="hidden lg:flex flex-col gap-4 pb-4 w-[240px]">
+              <div class="hidden lg:flex flex-col gap-4 pb-4 px-2 w-[240px]">
                 <img
                   src="./images/brands/toyama.svg"
                   class="self-center h-[160px]"
@@ -350,7 +350,7 @@
                 </div>
               </div>
 
-              <div class="hidden lg:flex flex-col gap-4 pb-4 w-[240px]">
+              <div class="hidden lg:flex flex-col gap-4 pb-4 px-2 w-[240px]">
                 <img
                   src="./images/brands/tramontina.svg"
                   class="self-center h-[160px]"
@@ -380,38 +380,52 @@
               </p>
             </header>
 
-            <div class="flex gap-4">
-              <div class="border border-blue-500 p-4 rounded">
-                <h2 class="font-display text-xl md:text-3xl font-semibold">
-                  10 anos de mercado
-                </h2>
-                <p class="max-w-[200px]">
+            <div class="md:w-auto flex flex-row flex-wrap gap-4 w-mobile justify-center md:w-tablet lg:w-desktop">
+              <div class="border border-blue p-4 rounded-xl grid content-center w-[320px] h-[240px]">
+                <div class="flex flex-row">
+                  <img
+                      src="./images/icons/more-blue.svg"
+                      class="pr-2 h-[35px] w-[30px]"
+                    />
+                    <h2 class="font-display text-2xl font-semibold pb-2">
+                      de 10 anos de mercado
+                    </h2>
+                </div>
+                <p class="text-justify">
                   Mais de uma década atuando no ramo de equipamentos motorizados na região de Maceió-AL.
                 </p>
               </div>
             
-              <div class="border border-blue-500 p-4 rounded">
-                <h2 class="font-display text-xl md:text-3xl font-semibold">
-                  Excelente localização
-                </h2>
-                <p class="max-w-[200px]">
+              <div class="border border-blue p-4 rounded-xl grid content-center w-[320px] h-[240px]">
+                <div class="flex flex-row">
+                  <img
+                      src="./images/icons/target-blue.svg"
+                      class="pr-2 h-[35px] w-[30px]"
+                    />
+                    <h2 class="font-display text-2xl font-semibold pb-2">
+                      Excelente localização
+                    </h2>
+                </div>
+                <p class="text-justify">
                   Sua localização central é perfeita para conseguir atender os clientes de todos os bairros da cidade.
                 </p>
               </div>
             
-              <div class="border border-blue-500 p-4 rounded">
-                <h2 class="font-display text-xl md:text-3xl font-semibold">
-                  5 multinacionais parceiras
-                </h2>
-                <p class="max-w-[200px]">
+              <div class="border border-blue p-4 rounded-xl grid content-center w-[320px] h-[240px]">
+                <div class="flex flex-row">
+                  <img
+                      src="./images/icons/more-blue.svg"
+                      class="pr-2 h-[65px] w-[30px]"
+                    />
+                    <h2 class="font-display text-2xl font-semibold pb-2">
+                      de 5 multinacionais parceiras!
+                    </h2>
+                </div>
+                <p class="text-justify">
                   Prestamos assistência para as principais marcas do mercado no setor.
                 </p>
               </div>
             </div>
-            
-            
-            
-
           </section>
 
           <!-- Serviços -->
@@ -432,51 +446,88 @@
             </header>
 
             <div>
-              <div class="flex gap-3">
-                <div class="border border-blue-500 p-4 rounded">
-                  <h2 class="font-display text-xl md:text-3xl font-semibold">
+              <div class="flex gap-3 flex flex-row flex-wrap w-mobile md:w-tablet lg:w-desktop">
+                <div class="border border-blue p-4 rounded-xl grid content-center w-[320px] h-[450px]">
+                  <img
+                      src="./images/icons/tools.svg"
+                      class="pr-2 h-[100px] w-[50px]"
+                    />
+                  <h2 class="font-display text-xl md:text-2xl font-semibold">
                     Manutenção de equipamentos motorizados
                   </h2>
-                  <p class="max-w-[200px]">
+                  <p class="text-justify py-4">
                     Nós realizamos manutenção de praticamente todo equipamento motorizado, incluindo para jardinagem, bombeamento de fluidos e de propósito geral.
                   </p>
-                  <button type="button">Saiba Mais →</button>
+                  <button
+                    class="self-center font-bold text-black text-sm bg-transparent ring-2 ring-yellow ring-inset px-10 py-3 rounded-xl hover:bg-yellow transition duration-50 ease-linear"
+                  >
+                    Saiba Mais →
+                  </button>
                 </div>
               
-                <div class="border border-blue-500 p-4 rounded">
-                  <h2 class="font-display text-xl md:text-3xl font-semibold">
+                <div class="border border-blue p-4 rounded-xl grid content-center w-[320px] h-[450px]">
+                  <img
+                      src="./images/icons/deal.svg"
+                      class="pr-2 h-[100px] w-[50px]"
+                    />
+                  <h2 class="font-display text-xl md:text-2xl font-semibold">
                     Assistência ténica autorizada
                   </h2>
-                  <p class="max-w-[200px]">
+                  <p class="text-justify py-4">
                     Somos autorizados pelos principais fabricantes para manutenção dos equipamentos ainda no prazo da garantia legal ou garantia contratual, sem custo para o cliente.
                   </p>
-                  <button type="button">Saiba Mais →</button>
+                  <button
+                    class="self-center font-bold text-black text-sm bg-transparent ring-2 ring-yellow ring-inset px-10 py-3 rounded-xl hover:bg-yellow transition duration-50 ease-linear"
+                  > 
+                    Saiba Mais →
+                  </button>
                 </div>
               
-                <div class="border border-blue-500 p-4 rounded">
-                  <h2 class="font-display text-xl md:text-3xl font-semibold">
+                <div class="border border-blue p-4 rounded-xl grid content-center w-[320px] h-[450px]">
+                  <img
+                      src="./images/icons/enginer-thinking.svg"
+                      class="pr-2 h-[100px] w-[50px]"
+                    />
+                  <h2 class="font-display text-xl md:text-2xl font-semibold">
                     Rebobinamento de motores
                   </h2>
-                  <p class="max-w-[200px]">
+                  <p class="text-justify py-4">
                     Temos profissionais especialistas no rebobinamento de motores elétricos. Através dela é possível trocar toda a bobinagem do motor, fazendo a mudança para fios de melhor qualidade.
                   </p>
-                  <button type="button">Saiba Mais →</button>
+                  <button
+                    class="self-center font-bold text-black text-sm bg-transparent ring-2 ring-yellow ring-inset px-10 py-3 rounded-xl hover:bg-yellow transition duration-50 ease-linear"
+                  > 
+                    Saiba Mais →
+                  </button>
                 </div>
 
-                <div class="border border-blue-500 p-4 rounded">
-                  <h2 class="font-display text-xl md:text-3xl font-semibold">
+                <div class="border border-blue p-4 rounded-xl grid content-center w-[320px] h-[450px]">
+                  <img
+                      src="./images/icons/homework.svg"
+                      class="pr-2 h-[100px] w-[50px]"
+                    />
+                  <h2 class="font-display text-xl md:text-2xl font-semibold">
                     Limpeza de poços artesianos
                   </h2>
-                  <p class="max-w-[200px]">
+                  <p class="text-justify py-4">
                     Somos especialistas em limpeza de poços artesianos tubulares residenciais e empresariais, com equipamentos de última linha.
                   </p>
-                  <button type="button">Saiba Mais →</button>
+                  <button
+                    class="self-center font-bold text-black text-sm bg-transparent ring-2 ring-yellow ring-inset px-10 py-3 rounded-xl hover:bg-yellow transition duration-50 ease-linear"
+                  > 
+                    Saiba Mais →
+                  </button>
                 </div>
 
               </div>
               
+            </div>
+          </section>
 
-              <img src="./images/maps.png" />
+          <!-- Maps -->
+          <section>
+            <div>
+              <img src="./images/maps.png" class="w-full" />
             </div>
           </section>
 
@@ -518,7 +569,7 @@
                       src="./images/icons/check.svg"
                       class="h-[14px] w-[19px]"
                     />
-                    Assitência técnica
+                    Assistência técnica
                   </li>
                   <li class="flex gap-2 font-medium items-center">
                     <img
