@@ -23,6 +23,7 @@
             whitebg: "#EFEDFF",
             graytext: "#C1C1C1",
             blueOpacityZero: "#0063EE00",
+            whitebgOpacity: "#efedffb3",
           },
           fontFamily: {
             display: ["Kanit", "sans-serif"],
@@ -67,7 +68,9 @@
         class="flex flex-col w-full flex-wrap md:flex-row lg:flex-nowrap justify-between items-center mb-6 lg:mb-10"
       >
         <!-- Logo -->
-        <img src="./images/logo.svg" class="w-64 h-7" />
+        <a href="index.html">
+          <img src="./images/logo.svg" class="w-64 h-7" />
+        </a>
 
         <!-- Barra de pesquisa -->
         <div class="w-full order-2 text-center mt-8 lg:order-1 lg:w-auto">
@@ -93,7 +96,7 @@
                 src="./images/icons/phone.svg"
                 class="w-3.5 h-3.5 inline mr-1"
               />
-              <a target="tel:+55 (82) 3316-6531" class="align-middle"
+              <a href="tel:+558233166531" class="align-middle"
                 >(82) 3316-6531</a
               >
             </div>
@@ -103,7 +106,7 @@
                 src="./images/icons/whatsapp.svg"
                 class="w-4 h-4 inline mr-1"
               />
-              <a target="tel:+55 (82) 9 9316-5234" class="align-middle"
+              <a href="tel:+5582993165234" class="align-middle"
                 >(82) 9 9316-5234</a
               >
             </div>
@@ -111,7 +114,7 @@
 
           <div>
             <img src="./images/icons/target.svg" class="w-3 h-4 inline mr-2" />
-            <a target="mail:" class="align-middle"
+            <a href="mail:" class="align-middle"
               >Av. Muniz Falcão, 2** B Maceió - AL</a
             >
           </div>
@@ -121,34 +124,71 @@
 
       <!-- Segunda seção -->
       <!-- Menu de navegação tablet e smartphone -->
-      <button
-        class="lg:hidden bg-blue w-menu text-left inline box-border px-4 py-3"
-      >
-        <img src="./images/icons/menu.svg" class="h-5 mr-6 inline" />
-        <span class="text-whitebg font-semibold text-base align-middle"
-          >Menu</span
-        >
-      </button>
+      <div class="lg:hidden">
+        <button class="bg-blue w-menu text-left inline box-border px-4 py-3">
+          <img src="./images/icons/menu.svg" class="h-5 mr-6 inline" />
+          <span class="text-whitebg font-semibold text-base align-middle"
+            >Menu</span
+          >
+        </button>
+
+        <!-- Menu -->
+        <div class="bg-whitebg px-5 py-8">
+          <nav class="flex flex-col justify-center gap-8">
+            <ol class="flex flex-col gap-7 mr-4 font-bold text-sm uppercase">
+              <li class="text-blue cursor-pointer">
+                <a href="index.html">Página Inicial</a>
+              </li>
+              <li class="flex items-center cursor-pointer">
+                <a href="#" class="mr-2">Produtos</a
+                ><img src="./images/icons/down-arrow.svg" />
+              </li>
+              <li class="flex items-center cursor-pointer">
+                <a href="#" class="mr-2">Serviços</a>
+                <img src="./images/icons/down-arrow.svg" class="rotate-180" />
+              </li>
+              <!-- Subnav -->
+              <li class="ml-4">
+                <ol class="flex flex-col gap-7">
+                  <li>Serviço 1</li>
+                  <li>Serviço 2</li>
+                  <li>Serviço 3</li>
+                </ol>
+              </li>
+              <li class="cursor-pointer">
+                <a href="#">Assistência Técnica</a>
+              </li>
+              <li class="cursor-pointer">
+                <a href="quem-somos.html">Quem somos</a>
+              </li>
+              <li class="cursor-pointer"><a target="#">Contate-nos</a></li>
+            </ol>
+            <img src="./images/toggle.png" class="h-[32px] w-[104px]" />
+          </nav>
+        </div>
+      </div>
 
       <!-- Barra de navegação desktop -->
       <nav class="hidden lg:flex justify-center items-center">
         <ol class="flex flex-row mr-4 font-bold text-sm uppercase">
           <li class="mr-6 text-blue cursor-pointer">
-            <a target="#">Página Inicial</a>
+            <a href="index.html">Página Inicial</a>
           </li>
           <li class="flex items-center mr-6 cursor-pointer">
-            <a target="#" class="mr-2">Produtos</a
+            <a href="#" class="mr-2">Produtos</a
             ><img src="./images/icons/down-arrow.svg" />
           </li>
           <li class="flex items-center mr-6 cursor-pointer">
-            <a target="#" class="mr-2">Serviços</a>
+            <a href="#" class="mr-2">Serviços</a>
             <img src="./images/icons/down-arrow.svg" />
           </li>
           <li class="mr-6 cursor-pointer">
-            <a target="#">Assistência Técnica</a>
+            <a href="#">Assistência Técnica</a>
           </li>
-          <li class="mr-6 cursor-pointer"><a target="#">Quem somos</a></li>
-          <li class="mr-6 cursor-pointer"><a target="#">Contate-nos</a></li>
+          <li class="mr-6 cursor-pointer">
+            <a href="quem-somos.html">Quem somos</a>
+          </li>
+          <li class="mr-6 cursor-pointer"><a href="#">Contate-nos</a></li>
         </ol>
         <img src="./images/toggle.png" />
       </nav>
@@ -204,10 +244,10 @@
       <!-- Seções principais -->
       <div class="w-screen max-w-full flex justify-center">
         <div
-          class="inline-flex flex-col flex-wrap gap-20 pt-14 w-mobile md:w-tablet lg:w-desktop"
+          class="inline-flex flex-col flex-wrap gap-20 pt-14 max-w-full w-mobile md:w-tablet lg:w-desktop"
         >
           <!-- Principais produtos -->
-          <section>
+          <section class="max-w-full w-mobile md:w-tablet lg:w-desktop">
             <!-- Cabeçalho da seção -->
             <header class="mb-14 md:w-[475px] lg:w-[600px]">
               <h2
@@ -308,7 +348,7 @@
           </section>
 
           <!-- Assistências técnicas -->
-          <section>
+          <section class="max-w-full w-mobile md:w-tablet lg:w-desktop">
             <header class="mb-14 md:w-[475px] lg:w-[600px]">
               <h2
                 class="font-display text-xs md:text-base font-bold text-blue uppercase tracking-[0.3rem] pl-0.5 -mb-1.5"
@@ -324,9 +364,7 @@
               </p>
             </header>
 
-            <div
-              class="flex gap-8 justify-center w-mobile md:w-tablet lg:w-desktop"
-            >
+            <div class="flex gap-8 justify-center">
               <div
                 class="bg-gradient-to-br from-blue w-[300px] h-[142px] p-[1px] rounded-xl"
               >
@@ -370,7 +408,7 @@
           </section>
 
           <!-- Dados de confiança -->
-          <section>
+          <section class="max-w-full w-mobile md:w-tablet lg:w-desktop">
             <header class="mb-14 md:w-[475px] lg:w-[600px]">
               <h2
                 class="font-display text-xs md:text-base font-bold text-blue uppercase tracking-[0.3rem] pl-0.5 -mb-1.5"
@@ -387,9 +425,7 @@
               </p>
             </header>
 
-            <div
-              class="md:w-auto flex flex-row flex-wrap gap-8 justify-center w-mobile md:w-tablet lg:w-desktop"
-            >
+            <div class="md:w-auto flex flex-row flex-wrap gap-8 justify-center">
               <div
                 class="bg-gradient-to-br from-blue w-[320px] h-[240px] p-[1px] rounded-xl"
               >
@@ -418,7 +454,7 @@
                 >
                   <div class="flex flex-row items-center gap-1 mb-4">
                     <img
-                      src="./images/icons/more-blue.svg"
+                      src="./images/icons/target-blue.svg"
                       class="pr-2 h-[30px] w-[30px]"
                     />
                     <h2 class="text-xl font-bold">Excelente localização</h2>
@@ -455,7 +491,7 @@
           </section>
 
           <!-- Serviços -->
-          <section>
+          <section class="max-w-full w-mobile md:w-tablet lg:w-desktop">
             <header class="mb-14 md:w-[475px] lg:w-[600px]">
               <h2
                 class="font-display text-xs md:text-base font-bold text-blue uppercase tracking-[0.3rem] pl-0.5 -mb-1.5"
@@ -472,16 +508,14 @@
             </header>
 
             <div>
-              <div
-                class="flex gap-8 flex flex-row flex-wrap w-mobile md:w-tablet lg:w-desktop"
-              >
+              <div class="flex gap-8 flex flex-row flex-wrap">
                 <div
                   class="bg-gradient-to-br from-blue w-[320px] h-[364px] p-[1px] rounded-xl"
                 >
                   <div
                     class="bg-white px-6 py-8 rounded-xl flex flex-col gap-5 w-full h-full"
                   >
-                    <div class="bg-whitebg rounded-lg h-[70px] w-[70px]">
+                    <div class="bg-whitebgOpacity rounded-lg h-[70px] w-[70px]">
                       <img
                         src="./images/icons/tools.svg"
                         class="h-[34px] w-[34px] ml-[18px] mt-[18px]"
@@ -514,7 +548,7 @@
                   <div
                     class="bg-white px-6 py-8 rounded-xl flex flex-col gap-5 w-full h-full"
                   >
-                    <div class="bg-whitebg rounded-lg h-[70px] w-[70px]">
+                    <div class="bg-whitebgOpacity rounded-lg h-[70px] w-[70px]">
                       <img
                         src="./images/icons/deal.svg"
                         class="h-[34px] w-[34px] ml-[18px] mt-[18px]"
@@ -545,7 +579,7 @@
                   <div
                     class="bg-white px-6 py-8 rounded-xl flex flex-col gap-5 w-full h-full"
                   >
-                    <div class="bg-whitebg rounded-lg h-[70px] w-[70px]">
+                    <div class="bg-whitebgOpacity rounded-lg h-[70px] w-[70px]">
                       <img
                         src="./images/icons/enginer-thinking.svg"
                         class="h-[34px] w-[34px] ml-[18px] mt-[18px]"
@@ -577,7 +611,7 @@
                   <div
                     class="bg-white px-6 py-8 rounded-xl flex flex-col gap-5 w-full h-full"
                   >
-                    <div class="bg-whitebg rounded-lg h-[70px] w-[70px]">
+                    <div class="bg-whitebgOpacity rounded-lg h-[70px] w-[70px]">
                       <img
                         src="./images/icons/homework.svg"
                         class="h-[34px] w-[34px] ml-[18px] mt-[18px]"
@@ -587,8 +621,8 @@
                     <h2 class="font-bold">Limpeza de poços artesianos</h2>
                     <p class="text-justify text-xs leading-4">
                       Somos especialistas em limpeza de poços artesianos
-                      tubulares residenciais e empresariais, com equipamentos de
-                      última linha.
+                      tubulares residenciais e empresariais, utilizamos
+                      equipamentos de última linha.
                     </p>
                     <button
                       class="font-semibold w-[160px] h-[54px] bg-yellow rounded-lg"
@@ -606,14 +640,14 @@
           </section>
 
           <!-- Maps -->
-          <section>
+          <section class="max-w-full w-mobile md:w-tablet lg:w-desktop">
             <div>
               <img src="./images/maps.png" class="w-full" />
             </div>
           </section>
 
           <!-- Orçamentos -->
-          <section>
+          <section class="max-w-full w-mobile md:w-tablet lg:w-desktop">
             <header class="mb-14 md:w-[475px] lg:w-[600px]">
               <h2
                 class="font-display text-xs md:text-base font-bold text-blue uppercase tracking-[0.3rem] pl-0.5 -mb-1.5"
@@ -685,7 +719,9 @@
       class="mt-12 max-w-full border-t border-text m-auto pt-14 pb-20 md:px-8 lg:px-0 md:w-auto flex flex-row flex-wrap gap-10 lg:justify-between items-start max-w-full w-mobile md:w-tablet lg:w-desktop"
     >
       <div>
-        <img src="./images/logo.svg" class="w-64 h-7" />
+        <a href="index.html">
+          <img src="./images/logo.svg" class="w-64 h-7" />
+        </a>
         <address class="mt-8 font-medium text-sm not-italic lg:order-2">
           <div class="flex flex-row mb-3">
             <div class="mr-4">
@@ -693,7 +729,9 @@
                 src="./images/icons/phone.svg"
                 class="w-3.5 h-3.5 inline mr-1"
               />
-              <a target="tel:+55 (82) 3316-6531">(82) 3316-6531</a>
+              <a href="tel:+558233166531" class="align-middle"
+                >(82) 3316-6531</a
+              >
             </div>
             <img src="./images/icons/divider.svg" />
             <div class="text-start ml-4">
@@ -701,13 +739,15 @@
                 src="./images/icons/whatsapp.svg"
                 class="w-4 h-4 inline mr-1"
               />
-              <a target="tel:+55 (82) 9 9316-5234">(82) 9 9316-5234</a>
+              <a href="tel:+5582993165234" class="align-middle"
+                >(82) 9 9316-5234</a
+              >
             </div>
           </div>
 
           <div>
             <img src="./images/icons/target.svg" class="w-3 h-4 inline mr-2" />
-            <a target="mail:">Av. Muniz Falcão, 2** B Maceió - AL</a>
+            <a class="align-middle">Av. Muniz Falcão, 2** B Maceió - AL</a>
           </div>
         </address>
       </div>
@@ -743,7 +783,9 @@
         <span class="uppercase font-bold block pb-4">Institucional</span>
         <ul class="flex flex-col gap-3">
           <li>
-            <a class="font-medium text-sm cursor-pointer">Página inicial</a>
+            <a href="index.html" class="font-medium text-sm cursor-pointer"
+              >Página inicial</a
+            >
           </li>
           <li>
             <a class="font-medium text-sm cursor-pointer"
@@ -751,7 +793,9 @@
             >
           </li>
           <li>
-            <a class="font-medium text-sm cursor-pointer">Quem somos</a>
+            <a href="quem-somos.html" class="font-medium text-sm cursor-pointer"
+              >Quem somos</a
+            >
           </li>
           <li>
             <a class="font-medium text-sm cursor-pointer">Orçamentos</a>
