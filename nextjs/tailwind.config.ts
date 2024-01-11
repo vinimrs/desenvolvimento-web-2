@@ -11,28 +11,28 @@ const config: Config = {
   ],
   theme: {
     colors: {
-      yellow: "#FFF00B",
-      blue: "#0063EE",
-      text: "#161616",
-      white: "#FFF",
-      whitebg: "#EFEDFF",
-      graytext: "#C1C1C1",
-      blueOpacityZero: "#0063EE00",
-      whitebgOpacity: "#efedffb3",
+      yellow: '#FFF00B',
+      blue: '#0063EE',
+      text: '#161616',
+      white: '#FFF',
+      whitebg: '#EFEDFF',
+      graytext: '#C1C1C1',
+      blueOpacityZero: '#0063EE00',
+      whitebgOpacity: '#efedffb3',
     },
     fontFamily: {
-      display: ["Kanit", "sans-serif"],
-      sans: ["Inter", "sans-serif"],
+      display: ['Kanit', 'sans-serif'],
+      sans: ['Inter', 'sans-serif'],
     },
     extend: {
       width: {
-        desktop: "1120px",
-        tablet: "680px",
-        mobile: "361px",
-        menu: "330px",
+        desktop: '1120px',
+        tablet: '680px',
+        mobile: '361px',
+        menu: '330px',
       },
       colors: {
-        black: "#161616",
+        black: '#161616',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -41,8 +41,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [
-    typografy, forms, aspectRatio
-  ],
-}
-export default config
+  plugins: [typografy, forms, aspectRatio],
+};
+export default config;
+

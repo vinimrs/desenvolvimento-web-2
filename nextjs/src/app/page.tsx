@@ -1,46 +1,18 @@
+import React from 'react';
 import { Metadata } from 'next';
-import Image from 'next/image';
+import Hero from './_components/Hero';
 
 export const metadata: Metadata = {
   title: 'MV Bombas - Home',
   description: 'Página inicial',
 };
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     // <!-- Conteúdo principal da pagina -->
     <main className="max-w-full">
       {/* <!-- Hero --> */}
-      <section className="bg-[url('/hero/garden.png')] bg-cover bg-center h-[450px]">
-        <div className="bg-[url('/filtro.png')] bg-cover bg-center h-full flex items-center justify-center">
-          <div className="flex flex-nowrap flex-col md:flex-row items-center justify-between md:justify-normal px-2 md:px-0 max-w-full md:w-auto">
-            <div className="order-1 md:order-0 text-whitebg mt-8 md:mt-0 md:mr-5 lg:mr-40">
-              <h2 className="text-base md:text-xl lg:text-2xl font-bold text-whitebg w-[280px] md:w-[340px] lg:w-[440px] mb-4">
-                Equipamentos de jardinagem
-              </h2>
-              <p className="text-xs md:text-sm lg:text-base font-semibold leading-4 md:leading-5 w-[280px] md:w-[340px] lg:w-[440px] text-justify mb-4">
-                Ferramentas para controlar o crescimento de gramíneas: são
-                aparadores de grama, cortadores de grama, roçadeiras e
-                sopradores.
-              </p>
-              <button className="text-xs md:text-sm lg:text-base font-semibold px-6 py-2 ring-2 ring-whitebg ring-inset">
-                Saiba mais
-              </button>
-            </div>
-            <div className="order-0 md:order-1">
-              <img
-                src="/products/gardening/brushcutter-still.png"
-                className="h-[152px] md:h-[197px] lg:h-[244px] inline"
-              />
-              <img
-                src="/products/gardening/grass-cutter-trapp.png"
-                className="h-[124px] md:h-[168px] lg:h-[244px] inline -ml-8 md:-ml-20 lg:-ml-24 -mb-6 md:-mb-10 lg:-mb-6"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <Hero />
       {/* <!-- Seções principais --> */}
       <div className="w-screen max-w-full flex justify-center">
         <div className="inline-flex flex-col flex-wrap gap-20 pt-14 max-w-full w-mobile md:w-tablet lg:w-desktop">
@@ -418,5 +390,7 @@ export default function Home() {
       </div>
     </main>
   );
-}
+};
+
+export default Home;
 

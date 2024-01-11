@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.p-highlight > button {
+  background-color: #0063ee;
+}
+
 @layer utilities {
   *,
   ::before,
