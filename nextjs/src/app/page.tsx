@@ -1,6 +1,19 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Hero from './_components/Hero';
+import {
+  FaArrowRight,
+  FaCheck,
+  FaHandshake,
+  FaPlus,
+  FaTools,
+} from 'react-icons/fa';
+import { FaLocationDot } from 'react-icons/fa6';
+import { MdEngineering, MdHomeWork } from 'react-icons/md';
+import { VscArrowRight } from 'react-icons/vsc';
+import { LuArrowRight } from 'react-icons/lu';
+import { HiArrowRight } from 'react-icons/hi';
+import { FiArrowRight, FiArrowUpRight } from 'react-icons/fi';
 
 export const metadata: Metadata = {
   title: 'MV Bombas - Home',
@@ -40,10 +53,10 @@ const Home: React.FC = () => {
                   className="self-center h-[160px]"
                 />
                 <div className="flex gap-1.5">
-                  <button className="bg-whitebg text-blue font-bold text-xs px-4 py-[5px] rounded-lg hover:bg-blue hover:text-whitebg transition duration-50 ease-linear">
+                  <button className="bg-whitebg dark:bg-whitebglight2 text-blue  font-bold text-xs px-4 py-[5px] rounded-lg hover:bg-blue hover:dark:bg-blue hover:text-whitebg transition duration-50 ease-linear">
                     Jardim
                   </button>
-                  <button className="bg-whitebg text-blue font-bold text-xs px-4 py-[5px] rounded-lg hover:bg-blue hover:text-whitebg transition duration-50 ease-linear">
+                  <button className="bg-whitebg dark:bg-whitebglight2 text-blue font-bold text-xs px-4 py-[5px] rounded-lg hover:bg-blue hover:dark:bg-blue hover:text-whitebg transition duration-50 ease-linear">
                     Elétrico
                   </button>
                 </div>
@@ -60,10 +73,10 @@ const Home: React.FC = () => {
                   className="self-center h-[160px]"
                 />
                 <div className="flex gap-1.5">
-                  <button className="bg-whitebg text-blue font-bold text-xs px-4 py-[5px] rounded-lg hover:bg-blue hover:text-whitebg transition duration-50 ease-linear">
+                  <button className="bg-whitebg dark:bg-whitebglight text-blue font-bold text-xs px-4 py-[5px] rounded-lg hover:bg-blue hover:text-whitebg transition duration-50 ease-linear">
                     Motobomba
                   </button>
-                  <button className="bg-whitebg text-blue font-bold text-xs px-4 py-[5px] rounded-lg hover:bg-blue hover:text-whitebg transition duration-50 ease-linear">
+                  <button className="bg-whitebg dark:bg-whitebglight text-blue font-bold text-xs px-4 py-[5px] rounded-lg hover:bg-blue hover:text-whitebg transition duration-50 ease-linear">
                     Elétrico
                   </button>
                 </div>
@@ -80,10 +93,10 @@ const Home: React.FC = () => {
                   className="self-center h-[160px]"
                 />
                 <div className="flex gap-1.5">
-                  <button className="bg-whitebg text-blue font-bold text-xs px-4 py-[5px] rounded-lg hover:bg-blue hover:text-whitebg transition duration-50 ease-linear">
+                  <button className="bg-whitebg dark:bg-whitebglight text-blue font-bold text-xs px-4 py-[5px] rounded-lg hover:bg-blue hover:text-whitebg transition duration-50 ease-linear">
                     Submersa
                   </button>
-                  <button className="bg-whitebg text-blue font-bold text-xs px-4 py-[5px] rounded-lg hover:bg-blue hover:text-whitebg transition duration-50 ease-linear">
+                  <button className="bg-whitebg dark:bg-whitebglight text-blue font-bold text-xs px-4 py-[5px] rounded-lg hover:bg-blue hover:text-whitebg transition duration-50 ease-linear">
                     Elétrico
                   </button>
                 </div>
@@ -114,25 +127,25 @@ const Home: React.FC = () => {
 
             <div className="flex gap-8 justify-center">
               <div className="bg-gradient-to-br from-blue w-[300px] h-[142px] p-[1px] rounded-xl">
-                <div className="bg-white rounded-xl px-2 flex justify-center w-full h-full">
+                <div className="bg-white dark:bg-whitebg rounded-xl px-2 flex justify-center w-full h-full">
                   <img src="/brands/schineider.svg" className="w-[220px]" />
                 </div>
               </div>
 
               <div className="hidden md:block bg-gradient-to-br from-blue w-[300px] h-[142px] p-[1px] rounded-xl">
-                <div className="bg-white rounded-xl px-2 flex justify-center w-full h-full">
+                <div className="bg-white dark:bg-whitebg rounded-xl px-2 flex justify-center w-full h-full">
                   <img src="/brands/buffalo.svg" className="w-[220px]" />
                 </div>
               </div>
 
               <div className="hidden lg:block bg-gradient-to-br from-blue w-[300px] h-[142px] p-[1px] rounded-xl">
-                <div className="bg-white rounded-xl px-2 flex justify-center w-full h-full">
+                <div className="bg-white dark:bg-whitebg rounded-xl px-2 flex justify-center w-full h-full">
                   <img src="/brands/toyama.svg" className="w-[220px]" />
                 </div>
               </div>
 
               <div className="hidden bg-gradient-to-br from-blue w-[300px] h-[142px] p-[1px] rounded-xl">
-                <div className="bg-white rounded-xl px-2 flex justify-center w-full h-full">
+                <div className="bg-white dark:bg-whitebg rounded-xl px-2 flex justify-center w-full h-full">
                   <img src="/brands/tramontina.svg" className="w-[220px]" />
                 </div>
               </div>
@@ -157,13 +170,12 @@ const Home: React.FC = () => {
 
             <div className="md:w-auto flex flex-row flex-wrap gap-8 justify-center">
               <div className="bg-gradient-to-br from-blue w-[320px] h-[240px] p-[1px] rounded-xl">
-                <div className="bg-white rounded-xl grid content-center px-6 h-full w-full">
-                  <div className="flex flex-row items-center gap-1 mb-4">
-                    <img
-                      src="/icons/more-blue.svg"
-                      className="pr-2 h-[30px] w-[30px]"
-                    />
-                    <h2 className="text-xl font-bold">de 10 anos de mercado</h2>
+                <div className="bg-white dark:bg-blackbg rounded-xl grid content-center px-6 h-full w-full">
+                  <div className="w-full mb-4">
+                    <FaPlus className="text-blue h-[30px] w-[30px] inline mr-2" />
+                    <h2 className="text-xl font-bold inline align-middle">
+                      de 10 anos de mercado
+                    </h2>
                   </div>
                   <p className="text-justify">
                     Mais de uma década atuando no ramo de equipamentos
@@ -173,13 +185,12 @@ const Home: React.FC = () => {
               </div>
 
               <div className="bg-gradient-to-br from-blue w-[320px] h-[240px] p-[1px] rounded-xl">
-                <div className="bg-white rounded-xl grid content-center px-6 h-full w-full">
-                  <div className="flex flex-row items-center gap-1 mb-4">
-                    <img
-                      src="/icons/target-blue.svg"
-                      className="pr-2 h-[30px] w-[30px]"
-                    />
-                    <h2 className="text-xl font-bold">Excelente localização</h2>
+                <div className="bg-white dark:bg-blackbg rounded-xl grid content-center px-6 h-full w-full">
+                  <div className="w-full mb-4">
+                    <FaLocationDot className="text-blue h-[30px] w-[30px] inline mr-2" />
+                    <h2 className="text-xl font-bold inline align-middle">
+                      Excelente localização
+                    </h2>
                   </div>
                   <p className="text-justify">
                     Sua localização central é perfeita para conseguir atender os
@@ -189,13 +200,10 @@ const Home: React.FC = () => {
               </div>
 
               <div className="bg-gradient-to-br from-blue w-[320px] h-[240px] p-[1px] rounded-xl">
-                <div className="bg-white rounded-xl grid content-center px-6 h-full w-full">
-                  <div className="flex flex-row items-center gap-1 mb-4">
-                    <img
-                      src="/icons/more-blue.svg"
-                      className="pr-2 h-[30px] w-[30px]"
-                    />
-                    <h2 className="text-xl font-bold">
+                <div className="bg-white dark:bg-blackbg rounded-xl grid content-center px-6 h-full w-full">
+                  <div className="w-full mb-4">
+                    <FaPlus className="text-blue h-[30px] w-[30px] inline mr-2" />
+                    <h2 className="text-xl font-bold inline align-middle">
                       de 5 multinacionais parceiras!
                     </h2>
                   </div>
@@ -226,12 +234,9 @@ const Home: React.FC = () => {
             <div className="lg:pl-12">
               <div className="gap-8 flex flex-row flex-wrap justify-center lg:justify-normal">
                 <div className="bg-gradient-to-br from-blue w-[320px] h-[364px] p-[1px] rounded-xl">
-                  <div className="bg-white px-6 py-8 rounded-xl flex flex-col gap-5 w-full h-full">
-                    <div className="bg-whitebgOpacity rounded-lg h-[70px] w-[70px]">
-                      <img
-                        src="/icons/tools.svg"
-                        className="h-[34px] w-[34px] ml-[18px] mt-[18px]"
-                      />
+                  <div className="bg-white dark:bg-blackbg px-6 py-8 rounded-xl flex flex-col gap-5 w-full h-full">
+                    <div className="bg-whitebgOpacity dark:bg-whitebglight2 rounded-lg h-[70px] w-[70px]">
+                      <FaTools className="text-blue h-[34px] w-[34px] ml-[18px] mt-[18px]" />
                     </div>
 
                     <h2 className="font-bold">
@@ -242,23 +247,17 @@ const Home: React.FC = () => {
                       motorizado, incluindo para jardinagem, bombeamento de
                       fluidos e de propósito geral.
                     </p>
-                    <button className="font-semibold w-[160px] h-[54px] bg-yellow rounded-lg">
+                    <button className="font-semibold w-[160px] h-[54px] bg-yellow dark:text-text rounded-lg">
                       <span className="align-middle">Saiba Mais</span>
-                      <img
-                        src="/icons/black-arrow-right.svg"
-                        className="h-[24px] w-[24px] inline ml-2.5"
-                      />
+                      <FiArrowRight className="h-[34px] w-[34px] inline ml-1.5" />
                     </button>
                   </div>
                 </div>
 
                 <div className="bg-gradient-to-br from-blue w-[320px] h-[364px] p-[1px] rounded-xl">
-                  <div className="bg-white px-6 py-8 rounded-xl flex flex-col gap-5 w-full h-full">
-                    <div className="bg-whitebgOpacity rounded-lg h-[70px] w-[70px]">
-                      <img
-                        src="/icons/deal.svg"
-                        className="h-[34px] w-[34px] ml-[18px] mt-[18px]"
-                      />
+                  <div className="bg-white dark:bg-blackbg px-6 py-8 rounded-xl flex flex-col gap-5 w-full h-full">
+                    <div className="bg-whitebgOpacity dark:bg-whitebglight2 rounded-lg h-[70px] w-[70px]">
+                      <FaHandshake className="text-blue h-[34px] w-[34px] ml-[18px] mt-[18px]" />
                     </div>
 
                     <h2 className="font-bold">
@@ -269,23 +268,17 @@ const Home: React.FC = () => {
                       manutenção dos equipamentos ainda no prazo da garantia
                       legal ou garantia contratual, sem custo para o cliente.
                     </p>
-                    <button className="font-semibold w-[160px] h-[54px] bg-yellow rounded-lg">
+                    <button className="font-semibold w-[160px] h-[54px] bg-yellow dark:text-text rounded-lg">
                       <span className="align-middle">Saiba Mais</span>
-                      <img
-                        src="/icons/black-arrow-right.svg"
-                        className="h-[24px] w-[24px] inline ml-2.5"
-                      />
+                      <FiArrowRight className="h-[34px] w-[34px] inline ml-1.5" />
                     </button>
                   </div>
                 </div>
 
                 <div className="bg-gradient-to-br from-blue w-[320px] h-[364px] p-[1px] rounded-xl">
-                  <div className="bg-white px-6 py-8 rounded-xl flex flex-col gap-5 w-full h-full">
-                    <div className="bg-whitebgOpacity rounded-lg h-[70px] w-[70px]">
-                      <img
-                        src="/icons/enginer-thinking.svg"
-                        className="h-[34px] w-[34px] ml-[18px] mt-[18px]"
-                      />
+                  <div className="bg-white dark:bg-blackbg px-6 py-8 rounded-xl flex flex-col gap-5 w-full h-full">
+                    <div className="bg-whitebgOpacity dark:bg-whitebglight2 rounded-lg h-[70px] w-[70px]">
+                      <MdEngineering className="text-blue h-[34px] w-[34px] ml-[18px] mt-[18px]" />
                     </div>
 
                     <h2 className="font-bold">Rebobinamento de motores</h2>
@@ -295,23 +288,17 @@ const Home: React.FC = () => {
                       bobinagem do motor, fazendo a mudança para fios de melhor
                       qualidade.
                     </p>
-                    <button className="font-semibold w-[160px] h-[54px] bg-yellow rounded-lg">
+                    <button className="font-semibold w-[160px] h-[54px] bg-yellow dark:text-text rounded-lg">
                       <span className="align-middle">Saiba Mais</span>
-                      <img
-                        src="/icons/black-arrow-right.svg"
-                        className="h-[24px] w-[24px] inline ml-2.5"
-                      />
+                      <FiArrowRight className="h-[34px] w-[34px] inline ml-1.5" />
                     </button>
                   </div>
                 </div>
 
                 <div className="bg-gradient-to-br from-blue w-[320px] h-[364px] p-[1px] rounded-xl">
-                  <div className="bg-white px-6 py-8 rounded-xl flex flex-col gap-5 w-full h-full">
-                    <div className="bg-whitebgOpacity rounded-lg h-[70px] w-[70px]">
-                      <img
-                        src="/icons/homework.svg"
-                        className="h-[34px] w-[34px] ml-[18px] mt-[18px]"
-                      />
+                  <div className="bg-white dark:bg-blackbg px-6 py-8 rounded-xl flex flex-col gap-5 w-full h-full">
+                    <div className="bg-whitebgOpacity dark:bg-whitebglight2 rounded-lg h-[70px] w-[70px]">
+                      <MdHomeWork className="text-blue h-[34px] w-[34px] ml-[18px] mt-[18px]" />
                     </div>
 
                     <h2 className="font-bold">Limpeza de poços artesianos</h2>
@@ -320,12 +307,9 @@ const Home: React.FC = () => {
                       tubulares residenciais e empresariais, utilizamos
                       equipamentos de última linha.
                     </p>
-                    <button className="font-semibold w-[160px] h-[54px] bg-yellow rounded-lg">
+                    <button className="font-semibold w-[160px] h-[54px] bg-yellow dark:text-text rounded-lg">
                       <span className="align-middle">Saiba Mais</span>
-                      <img
-                        src="/icons/black-arrow-right.svg"
-                        className="h-[24px] w-[24px] inline ml-2.5"
-                      />
+                      <FiArrowRight className="h-[34px] w-[34px] inline ml-1.5" />
                     </button>
                   </div>
                 </div>
@@ -362,26 +346,26 @@ const Home: React.FC = () => {
                   problema.
                 </h3>
                 <ul className="text-sm mb-6 flex flex-col gap-2">
-                  <li className="flex gap-2 font-medium items-center">
-                    <img src="/icons/check.svg" className="h-[14px] w-[19px]" />
+                  <li className="flex gap-1 font-medium items-center">
+                    <FaCheck className="h-[20px] w-[28px]" />
                     Previsão de entrega
                   </li>
-                  <li className="flex gap-2 font-medium items-center">
-                    <img src="/icons/check.svg" className="h-[14px] w-[19px]" />
+                  <li className="flex gap-1 font-medium items-center">
+                    <FaCheck className="h-[20px] w-[28px]" />
                     Assistência técnica
                   </li>
-                  <li className="flex gap-2 font-medium items-center">
-                    <img src="/icons/check.svg" className="h-[14px] w-[19px]" />
+                  <li className="flex gap-1 font-medium items-center">
+                    <FaCheck className="h-[20px] w-[28px]" />
                     Produtos de qualidade
                   </li>
-                  <li className="flex gap-2 font-medium items-center">
-                    <img src="/icons/check.svg" className="h-[14px] w-[19px]" />
+                  <li className="flex gap-1 font-medium items-center">
+                    <FaCheck className="h-[20px] w-[28px]" />
                     Garantia
                   </li>
                 </ul>
-                <button className="text-sm lg:text-base px-6 py-2.5 ring-2 ring-whitebg ring-inset rounded-xl flex items-center gap-2 font-bold hover:bg-whitebg hover:text-blue transition duration-50 ease-linear">
+                <button className="text-sm lg:text-base px-6 py-1.5 ring-2 ring-whitebg ring-inset rounded-xl flex items-center gap-2 font-bold hover:bg-whitebg hover:text-blue transition duration-50 ease-linear">
                   Solicite um orçamento
-                  <img src="/icons/angled-arrow.svg" />
+                  <FiArrowUpRight className="h-[32px] w-[32px]" />
                 </button>
               </div>
             </div>

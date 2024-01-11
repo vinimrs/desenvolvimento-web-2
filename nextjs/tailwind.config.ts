@@ -4,6 +4,7 @@ import forms from '@tailwindcss/forms';
 import aspectRatio from '@tailwindcss/aspect-ratio';
 
 const config: Config = {
+  darkMode: 'class',
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -14,8 +15,13 @@ const config: Config = {
       yellow: '#FFF00B',
       blue: '#0063EE',
       text: '#161616',
-      white: '#FFF',
+      blackbg: '#161616',
       whitebg: '#EFEDFF',
+      whitebg2: '#EFEDFFCC',
+      whitebglight: '#EFEDFF2B',
+      whitebglight2: '#EFEDFF1A',
+      whitebglight3: '#EFEDFF0A',
+      white: '#FFF',
       graytext: '#C1C1C1',
       blueOpacityZero: '#0063EE00',
       whitebgOpacity: '#efedffb3',

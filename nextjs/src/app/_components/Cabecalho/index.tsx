@@ -1,6 +1,9 @@
 'use client';
 import { usePathname } from 'next/navigation';
 import React from 'react';
+import BotaoTema from './BotaoTema';
+import { FaPhoneAlt, FaSearch, FaWhatsapp } from 'react-icons/fa';
+import { FaLocationDot } from 'react-icons/fa6';
 
 const Cabecalho: React.FC = () => {
   const path = usePathname();
@@ -20,10 +23,13 @@ const Cabecalho: React.FC = () => {
             <input
               type="text"
               placeholder="O que você deseja..."
-              className="px-3 py-2.5 border-2 border-r-0 border-whitebg align-middle w-60 text-xs placeholder:text-graytext placeholder:text-xs focus:border-whitebg focus:border-transparent focus:ring-0"
+              className="px-3 py-2.5 border-2 border-r-0 dark:bg-whitebglight3 border-whitebg dark:border-whitebglight align-middle w-60 text-xs placeholder:text-graytext placeholder:text-xs focus:border-whitebg dark:focus:border-blackbg focus:border-transparent focus:ring-0"
             />
-            <button type="submit" className="w-10 h-10 align-middle bg-whitebg">
-              <img src="/icons/loupe.svg" className="w-5 h-5 m-auto" />
+            <button
+              type="submit"
+              className="w-10 h-10 align-middle bg-whitebg dark:bg-whitebglight"
+            >
+              <FaSearch className="w-5 h-5 m-auto text-blue" />
             </button>
           </form>
         </div>
@@ -31,15 +37,14 @@ const Cabecalho: React.FC = () => {
         {/* <!-- Contatos da empresa --> */}
         <address className="mt-8 md:mt-0 font-medium text-sm not-italic text-center lg:order-2">
           <div className="flex flex-row mb-3">
-            <div className="mr-4">
-              <img src="/icons/phone.svg" className="w-3.5 h-3.5 inline mr-1" />
+            <div className="border-r-2 pr-4 dark:border-whitebg border-blackbg">
+              <FaPhoneAlt className="w-3.5 h-3.5 inline mr-1" />
               <a href="tel:+558233166531" className="align-middle">
                 (82) 3316-6531
               </a>
             </div>
-            <img src="/icons/divider.svg" />
             <div className="text-center ml-4">
-              <img src="/icons/whatsapp.svg" className="w-4 h-4 inline mr-1" />
+              <FaWhatsapp className="w-4 h-4 inline mr-1" />
               <a href="tel:+5582993165234" className="align-middle">
                 (82) 9 9316-5234
               </a>
@@ -47,7 +52,7 @@ const Cabecalho: React.FC = () => {
           </div>
 
           <div>
-            <img src="/icons/target.svg" className="w-3 h-4 inline mr-2" />
+            <FaLocationDot className="w-3 h-4 inline mr-2" />
             <a href="mail:" className="align-middle">
               Av. Muniz Falcão, 2** B Maceió - AL
             </a>
@@ -67,7 +72,7 @@ const Cabecalho: React.FC = () => {
         </button>
 
         {/* <!-- Menu --> */}
-        <div className="bg-whitebg px-5 py-8">
+        <div className="bg-whitebg text-text px-5 py-8">
           <nav className="flex flex-col justify-center gap-8">
             <ol className="flex flex-col gap-7 mr-4 font-bold text-sm uppercase">
               <li
@@ -109,7 +114,7 @@ const Cabecalho: React.FC = () => {
                 <a target="#">Contate-nos</a>
               </li>
             </ol>
-            <img src="/toggle.png" className="h-[32px] w-[104px]" />
+            <BotaoTema />
           </nav>
         </div>
       </div>
@@ -148,7 +153,7 @@ const Cabecalho: React.FC = () => {
             <a href="#">Contate-nos</a>
           </li>
         </ol>
-        <img src="/toggle.png" />
+        <BotaoTema />
       </nav>
     </header>
   );
