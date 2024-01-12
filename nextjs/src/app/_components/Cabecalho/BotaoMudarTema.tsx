@@ -2,17 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { useLocalStorage } from 'usehooks-ts';
 
 const BotaoTema: React.FC = () => {
-  const [theme, setTheme] = useLocalStorage('theme', 'light');
-  const [enabled, setEnabled] = useState(theme === 'dark');
+  const [isDarkTheme, setDarkTheme] = useLocalStorage('darkTheme', true);
+  const [enabled, setEnabled] = useState(isDarkTheme);
 
   useEffect(() => {
-    console.log('chamou');
     document.documentElement.classList.remove('light', 'dark');
-    document.documentElement.classList.add(theme);
-  }, [theme]);
+    document.documentElement.classList.add(isDarkTheme ? 'dark' : 'light');
+  }, [isDarkTheme]);
 
   const handleThemeChange = (enabled: boolean) => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
+    setDarkTheme(prev => !prev);
     setEnabled(!enabled);
   };
 

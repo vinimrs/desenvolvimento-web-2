@@ -1,9 +1,10 @@
 'use client';
 import { usePathname } from 'next/navigation';
 import React from 'react';
-import BotaoTema from './BotaoTema';
+import BotaoMudarTema from './BotaoMudarTema';
 import { FaPhoneAlt, FaSearch, FaWhatsapp } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
+import MenuMobile from './MenuMobile';
 
 const Cabecalho: React.FC = () => {
   const path = usePathname();
@@ -64,59 +65,7 @@ const Cabecalho: React.FC = () => {
       {/* <!-- Segunda seção --> */}
       {/* <!-- Menu de navegação tablet e smartphone --> */}
       <div className="lg:hidden">
-        <button className="bg-blue w-menu text-left inline box-border px-4 py-3">
-          <img src="/icons/menu.svg" className="h-5 mr-6 inline" />
-          <span className="text-whitebg font-semibold text-base align-middle">
-            Menu
-          </span>
-        </button>
-
-        {/* <!-- Menu --> */}
-        <div className="bg-whitebg text-text px-5 py-8">
-          <nav className="flex flex-col justify-center gap-8">
-            <ol className="flex flex-col gap-7 mr-4 font-bold text-sm uppercase">
-              <li
-                className={`cursor-pointer ${path === '/' ? 'text-blue' : ''}`}
-              >
-                <a href="/">Página Inicial</a>
-              </li>
-              <li className={`flex items-center cursor-pointer`}>
-                <a href="#" className="mr-2">
-                  Produtos
-                </a>
-                <img src="/icons/down-arrow.svg" />
-              </li>
-              <li className={`flex items-center cursor-pointer`}>
-                <a href="#" className="mr-2">
-                  Serviços
-                </a>
-                <img src="/icons/down-arrow.svg" className="rotate-180" />
-              </li>
-              {/* <!-- Subnav --> */}
-              <li className="ml-4">
-                <ol className="flex flex-col gap-7">
-                  <li>Serviço 1</li>
-                  <li>Serviço 2</li>
-                  <li>Serviço 3</li>
-                </ol>
-              </li>
-              <li className="cursor-pointer">
-                <a href="#">Assistência Técnica</a>
-              </li>
-              <li
-                className={`cursor-pointer ${
-                  path === '/quem-somos' ? 'text-blue' : ''
-                }`}
-              >
-                <a href="/quem-somos">Quem somos</a>
-              </li>
-              <li className="cursor-pointer">
-                <a target="#">Contate-nos</a>
-              </li>
-            </ol>
-            <BotaoTema />
-          </nav>
-        </div>
+        <MenuMobile />
       </div>
 
       {/* <!-- Barra de navegação desktop --> */}
@@ -153,7 +102,7 @@ const Cabecalho: React.FC = () => {
             <a href="#">Contate-nos</a>
           </li>
         </ol>
-        <BotaoTema />
+        <BotaoMudarTema />
       </nav>
     </header>
   );
