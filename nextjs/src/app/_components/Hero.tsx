@@ -3,6 +3,7 @@ import React from 'react';
 import json from '../../../public/heroItems.json';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Image from 'next/image';
 
 const Hero: React.FC = () => {
   const { items } = json;
@@ -24,9 +25,11 @@ const Hero: React.FC = () => {
           key={item.id}
           className="h-[520px] relative flex items-center justify-center"
         >
-          <img
+          <Image
             src={item.image}
-            className="w-full h-full -z-10 absolute object-cover"
+            alt="Imagem do banner"
+            layout="fill"
+            className="-z-10 absolute object-cover"
           />
           <div className="h-full flex flex-nowrap flex-col md:flex-row items-center justify-center md:justify-between px-2 md:px-0 w-mobile md:w-tablet lg:w-desktop">
             <div className="order-1 md:order-0 text-whitebg mt-8 text-start w-[340px] md:w-[380px] lg:w-[500px]">
@@ -46,6 +49,7 @@ const Hero: React.FC = () => {
                   <img
                     key={equipment.name}
                     src={equipment.image}
+                    alt={equipment.name}
                     className="h-[152px] md:h-[197px] lg:h-[244px] inline"
                   />
                 )

@@ -11,7 +11,7 @@ const Rodape: React.FC = () => {
         </a>
         <address className="mt-8 font-medium text-sm not-italic lg:order-2">
           <div className="flex flex-row mb-3">
-            <div className="mr-4">
+            <div className="border-r-2 pr-4 dark:border-whitebg border-blackbg">
               <FaPhoneAlt className="w-3.5 h-3.5 inline mr-1" />
               <a href="tel:+558233166531" className="align-middle">
                 (82) 3316-6531

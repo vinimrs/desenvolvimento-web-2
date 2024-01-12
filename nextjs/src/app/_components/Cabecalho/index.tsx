@@ -5,6 +5,8 @@ import BotaoMudarTema from './BotaoMudarTema';
 import { FaPhoneAlt, FaSearch, FaWhatsapp } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
 import MenuMobile from './MenuMobile';
+import { IoIosArrowDown } from 'react-icons/io';
+import Image from 'next/image';
 
 const Cabecalho: React.FC = () => {
   const path = usePathname();
@@ -15,7 +17,12 @@ const Cabecalho: React.FC = () => {
       <div className="flex flex-col w-full flex-wrap md:flex-row lg:flex-nowrap justify-between items-center mb-6 lg:mb-10">
         {/* <!-- Logo --> */}
         <a href="/">
-          <img src="/logo.svg" className="w-64 h-7" />
+          <Image
+            src="/logo.svg"
+            alt="Logo da MV Bombas"
+            width={256}
+            height={28}
+          />
         </a>
 
         {/* <!-- Barra de pesquisa --> */}
@@ -80,13 +87,13 @@ const Cabecalho: React.FC = () => {
             <a href="#" className="mr-2">
               Produtos
             </a>
-            <img src="/icons/down-arrow.svg" />
+            <IoIosArrowDown />
           </li>
           <li className="flex items-center mr-6 cursor-pointer">
             <a href="#" className="mr-2">
               Serviços
             </a>
-            <img src="/icons/down-arrow.svg" />
+            <IoIosArrowDown />
           </li>
           <li className="mr-6 cursor-pointer">
             <a href="#">Assistência Técnica</a>

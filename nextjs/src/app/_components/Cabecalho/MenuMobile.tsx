@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { IoMenuSharp } from 'react-icons/io5';
 import BotaoTema from './BotaoMudarTema';
 import { usePathname } from 'next/navigation';
+import { IoIosArrowDown } from 'react-icons/io';
 
 const MenuMobile: React.FC = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const path = usePathname();
+
   return (
     <div className="relative">
       <button
@@ -26,17 +28,17 @@ const MenuMobile: React.FC = () => {
               >
                 <a href="/">Página Inicial</a>
               </li>
-              <li className={`flex items-center cursor-pointer`}>
+              <li className="flex items-center cursor-pointer">
                 <a href="#" className="mr-2">
                   Produtos
                 </a>
-                <img src="/icons/down-arrow.svg" />
+                <IoIosArrowDown />
               </li>
-              <li className={`flex items-center cursor-pointer`}>
+              <li className="flex items-center cursor-pointer">
                 <a href="#" className="mr-2">
                   Serviços
                 </a>
-                <img src="/icons/down-arrow.svg" className="rotate-180" />
+                <IoIosArrowDown className="rotate-180" />
               </li>
               {/* <!-- Subnav --> */}
               <li className="ml-4">

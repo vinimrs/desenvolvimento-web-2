@@ -18,7 +18,7 @@ const QuemSomos = (): JSX.Element => {
                 <div className="font-display">
                   <p className="mb-8">
                     Bem-vindo à MV Bombas, sua fonte confiável para soluções em
-                    bombas d'água, motores, equipamentos de jardinagem e
+                    bombas d&apos;água, motores, equipamentos de jardinagem e
                     geradores.
                   </p>
                   <p className="mb-8">

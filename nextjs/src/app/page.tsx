@@ -1,18 +1,9 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Hero from './_components/Hero';
-import {
-  FaArrowRight,
-  FaCheck,
-  FaHandshake,
-  FaPlus,
-  FaTools,
-} from 'react-icons/fa';
+import { FaCheck, FaHandshake, FaPlus, FaTools } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
 import { MdEngineering, MdHomeWork } from 'react-icons/md';
-import { VscArrowRight } from 'react-icons/vsc';
-import { LuArrowRight } from 'react-icons/lu';
-import { HiArrowRight } from 'react-icons/hi';
 import { FiArrowRight, FiArrowUpRight } from 'react-icons/fi';
 
 export const metadata: Metadata = {
