@@ -1,0 +1,10 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "",
+      "imagem": "",
+      "categorias": ["Jardim"]
+    }
+  ]
+}
