@@ -8,6 +8,11 @@
   background-color: #0063ee;
 }
 
+.leaflet-container{
+  height: 100vh;
+  width: auto;
+}
+
 @layer utilities {
   *,
   ::before,

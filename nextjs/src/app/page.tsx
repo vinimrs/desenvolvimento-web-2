@@ -5,6 +5,9 @@ import { FaCheck, FaHandshake, FaPlus, FaTools } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
 import { MdEngineering, MdHomeWork } from 'react-icons/md';
 import { FiArrowRight, FiArrowUpRight } from 'react-icons/fi';
+import dynamic from 'next/dynamic';
+
+const Map = dynamic(() => import("./_components/Map"), { ssr: false });
 
 export const metadata: Metadata = {
   title: 'MV Bombas - Home',
@@ -310,9 +313,7 @@ const Home: React.FC = () => {
 
           {/* <!-- Maps --> */}
           <section className="max-w-full w-mobile md:w-tablet lg:w-desktop">
-            <div>
-              <img src="/maps.png" className="w-full" />
-            </div>
+            <Map />
           </section>
 
           {/* <!-- Orçamentos --> */}
