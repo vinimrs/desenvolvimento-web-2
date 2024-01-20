@@ -31,7 +31,7 @@ const Cabecalho: React.FC = () => {
             <input
               type="text"
               placeholder="O que você deseja..."
-              className="px-3 py-2.5 border-2 border-r-0 dark:bg-whitebglight3 border-whitebg dark:border-whitebglight align-middle w-60 text-xs placeholder:text-graytext placeholder:text-xs focus:border-whitebg dark:focus:border-blackbg focus:border-transparent focus:ring-0"
+              className="px-3 py-2.5 border-2 border-r-0 dark:bg-whitebglight3 border-whitebg dark:border-whitebglight align-middle w-60 text-xs placeholder:text-graytext placeholder:text-xs focus:border-whitebg dark:focus:border-whitebglight focus:border-transparent focus:ring-0"
             />
             <button
               type="submit"

@@ -13,8 +13,9 @@ const MapComponent = () => {
   return (
     <MapContainer
       center={[-9.6186763, -35.7213639]}
-      zoom={17}
-      style={{ width: '100%', height: '300px' }}
+      zoom={16}
+      fadeAnimation={true}
+      className="h-[300px] lg:h-[500px] screen-width"
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

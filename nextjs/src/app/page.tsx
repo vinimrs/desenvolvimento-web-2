@@ -25,7 +25,7 @@ const Home: React.FC = () => {
       <Hero />
       {/* <!-- Seções principais --> */}
       <div className="w-screen max-w-full flex justify-center">
-        <div className="inline-flex flex-col flex-wrap gap-20 pt-14 max-w-full w-mobile md:w-tablet lg:w-desktop">
+        <div className="inline-flex flex-col flex-wrap gap-20 pt-14 items-center">
           {/* <!-- Principais produtos --> */}
           <PrincipaisProdutos />
 
@@ -96,7 +96,7 @@ const Home: React.FC = () => {
               <div className="gap-8 flex flex-row flex-wrap justify-center lg:justify-normal">
                 <div className="bg-gradient-to-br from-blue w-[320px] h-[364px] p-[1px] rounded-xl">
                   <div className="bg-white dark:bg-blackbg px-6 py-8 rounded-xl flex flex-col gap-5 w-full h-full">
-                    <div className="bg-whitebgOpacity dark:bg-whitebglight2 rounded-lg h-[70px] w-[70px]">
+                    <div className="bg-whitebgOpacity dark:bg-whitebglight3 rounded-lg h-[70px] w-[70px]">
                       <FaTools className="text-blue h-[34px] w-[34px] ml-[18px] mt-[18px]" />
                     </div>
 
@@ -117,7 +117,7 @@ const Home: React.FC = () => {
 
                 <div className="bg-gradient-to-br from-blue w-[320px] h-[364px] p-[1px] rounded-xl">
                   <div className="bg-white dark:bg-blackbg px-6 py-8 rounded-xl flex flex-col gap-5 w-full h-full">
-                    <div className="bg-whitebgOpacity dark:bg-whitebglight2 rounded-lg h-[70px] w-[70px]">
+                    <div className="bg-whitebgOpacity dark:bg-whitebglight3 rounded-lg h-[70px] w-[70px]">
                       <FaHandshake className="text-blue h-[34px] w-[34px] ml-[18px] mt-[18px]" />
                     </div>
 
@@ -138,7 +138,7 @@ const Home: React.FC = () => {
 
                 <div className="bg-gradient-to-br from-blue w-[320px] h-[364px] p-[1px] rounded-xl">
                   <div className="bg-white dark:bg-blackbg px-6 py-8 rounded-xl flex flex-col gap-5 w-full h-full">
-                    <div className="bg-whitebgOpacity dark:bg-whitebglight2 rounded-lg h-[70px] w-[70px]">
+                    <div className="bg-whitebgOpacity dark:bg-whitebglight3 rounded-lg h-[70px] w-[70px]">
                       <MdEngineering className="text-blue h-[34px] w-[34px] ml-[18px] mt-[18px]" />
                     </div>
 
@@ -158,7 +158,7 @@ const Home: React.FC = () => {
 
                 <div className="bg-gradient-to-br from-blue w-[320px] h-[364px] p-[1px] rounded-xl">
                   <div className="bg-white dark:bg-blackbg px-6 py-8 rounded-xl flex flex-col gap-5 w-full h-full">
-                    <div className="bg-whitebgOpacity dark:bg-whitebglight2 rounded-lg h-[70px] w-[70px]">
+                    <div className="bg-whitebgOpacity dark:bg-whitebglight3 rounded-lg h-[70px] w-[70px]">
                       <MdHomeWork className="text-blue h-[34px] w-[34px] ml-[18px] mt-[18px]" />
                     </div>
 
@@ -176,15 +176,6 @@ const Home: React.FC = () => {
                 </div>
               </div>
             </div>
-          </Sessao>
-
-          {/* <!-- Maps --> */}
-          <Sessao
-            title="Traga seu equipamento para nós"
-            subtitle="Localização"
-            description="Nos visite em nossa sede localizada no bairro do Barro duro, em Maceió-AL."
-          >
-            <Map />
           </Sessao>
 
           {/* <!-- Orçamentos --> */}
@@ -223,6 +214,16 @@ const Home: React.FC = () => {
                 </button>
               </div>
             </div>
+          </Sessao>
+
+          {/* <!-- Maps --> */}
+          <Sessao
+            title="Traga seu equipamento para nós"
+            subtitle="Localização"
+            description="Nos visite em nossa sede localizada no bairro do Barro duro, em Maceió-AL."
+            full
+          >
+            <Map />
           </Sessao>
         </div>
       </div>

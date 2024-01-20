@@ -51,6 +51,8 @@ const Assistencias: React.FC = () => {
       description="Oferecemos assistência técnica para as principais marcas do mercado."
     >
       <Carousel
+        ssr
+        deviceType={'desktop'}
         swipeable={true}
         draggable={false}
         showDots={false}
@@ -60,10 +62,13 @@ const Assistencias: React.FC = () => {
         autoPlay={true}
         autoPlaySpeed={0}
         keyBoardControl={true}
+        pauseOnHover={true}
         customTransition="all 2s linear"
         transitionDuration={2000}
         slidesToSlide={1}
         minimumTouchDrag={80}
+        rewind={false}
+        rewindWithAnimation={false}
       >
         {assistencias.map(assistencia => (
           <div
