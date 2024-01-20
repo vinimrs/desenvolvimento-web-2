@@ -6,8 +6,10 @@ import { FaLocationDot } from 'react-icons/fa6';
 import { MdEngineering, MdHomeWork } from 'react-icons/md';
 import { FiArrowRight, FiArrowUpRight } from 'react-icons/fi';
 import dynamic from 'next/dynamic';
+import Sessao from './_components/Sessao';
+import PrincipaisProdutos from './_components/Sessoes/PrincipaisProdutos';
 
-const Map = dynamic(() => import("./_components/Map"), { ssr: false });
+const Map = dynamic(() => import('./_components/Map'), { ssr: false });
 
 export const metadata: Metadata = {
   title: 'MV Bombas - Home',
@@ -24,101 +26,14 @@ const Home: React.FC = () => {
       <div className="w-screen max-w-full flex justify-center">
         <div className="inline-flex flex-col flex-wrap gap-20 pt-14 max-w-full w-mobile md:w-tablet lg:w-desktop">
           {/* <!-- Principais produtos --> */}
-          <section className="max-w-full w-mobile md:w-tablet lg:w-desktop">
-            {/* <!-- Cabeçalho da seção --> */}
-            <header className="mb-14 md:w-[475px] lg:w-[600px]">
-              <h2 className="font-display text-xs md:text-base font-bold text-blue uppercase tracking-[0.3rem] pl-0.5 -mb-1.5">
-                Produtos
-              </h2>
-              <h1 className="font-display text-2xl md:text-3xl font-semibold">
-                Principais produtos
-              </h1>
-              <p className="text-xs md:text-base w-[290px] md:w-full">
-                Vendemos os produtos mais confiáveis para resolver suas
-                necessidades.
-              </p>
-            </header>
-            {/* <!-- Lista de produtos --> */}
-            <div className="flex flex-nowrap pl-10 gap-4 justify-center">
-              {/* <!-- Produto --> */}
-              <div className="flex flex-col gap-4 pb-4 w-[240px]">
-                <img
-                  src="/products/gardening/grass-cutter-trapp-list.png"
-                  className="self-center h-[160px]"
-                />
-                <div className="flex gap-1.5">
-                  <button className="bg-whitebg dark:bg-whitebglight2 text-blue  font-bold text-xs px-4 py-[5px] rounded-lg hover:bg-blue hover:dark:bg-blue hover:text-whitebg transition duration-50 ease-linear">
-                    Jardim
-                  </button>
-                  <button className="bg-whitebg dark:bg-whitebglight2 text-blue font-bold text-xs px-4 py-[5px] rounded-lg hover:bg-blue hover:dark:bg-blue hover:text-whitebg transition duration-50 ease-linear">
-                    Elétrico
-                  </button>
-                </div>
-                <h3 className="font-bold leading-5">
-                  Cortador de Grama Elétrico Trapp MC-50E
-                </h3>
-                <button className="self-center font-bold text-blue text-sm bg-transparent ring-2 ring-blue ring-inset px-20 py-3 rounded-xl hover:bg-blue hover:text-whitebg transition duration-50 ease-linear">
-                  Leia Mais
-                </button>
-              </div>
-              <div className="hidden md:flex flex-col gap-4 pb-4 w-[240px]">
-                <img
-                  src="/products/pumps/small-pump-schineider-list.png"
-                  className="self-center h-[160px]"
-                />
-                <div className="flex gap-1.5">
-                  <button className="bg-whitebg dark:bg-whitebglight text-blue font-bold text-xs px-4 py-[5px] rounded-lg hover:bg-blue hover:text-whitebg transition duration-50 ease-linear">
-                    Motobomba
-                  </button>
-                  <button className="bg-whitebg dark:bg-whitebglight text-blue font-bold text-xs px-4 py-[5px] rounded-lg hover:bg-blue hover:text-whitebg transition duration-50 ease-linear">
-                    Elétrico
-                  </button>
-                </div>
-                <h3 className="font-bold leading-5">
-                  Motobomba autoaspirante residencial ASP-98
-                </h3>
-                <button className="self-center font-bold text-blue text-sm bg-transparent ring-2 ring-blue ring-inset px-20 py-3 rounded-xl hover:bg-blue hover:text-whitebg transition duration-50 ease-linear">
-                  Leia Mais
-                </button>
-              </div>
-              <div className="hidden lg:flex flex-col gap-4 pb-4 w-[240px]">
-                <img
-                  src="/products/motor-pumps/submersible-motor-pump-schineider-list.png"
-                  className="self-center h-[160px]"
-                />
-                <div className="flex gap-1.5">
-                  <button className="bg-whitebg dark:bg-whitebglight text-blue font-bold text-xs px-4 py-[5px] rounded-lg hover:bg-blue hover:text-whitebg transition duration-50 ease-linear">
-                    Submersa
-                  </button>
-                  <button className="bg-whitebg dark:bg-whitebglight text-blue font-bold text-xs px-4 py-[5px] rounded-lg hover:bg-blue hover:text-whitebg transition duration-50 ease-linear">
-                    Elétrico
-                  </button>
-                </div>
-                <h3 className="font-bold leading-5">
-                  Motobomba Submersa Schineider SUB 50
-                </h3>
-                <button className="self-center font-bold text-blue text-sm bg-transparent ring-2 ring-blue ring-inset px-20 py-3 rounded-xl hover:bg-blue hover:text-whitebg transition duration-50 ease-linear">
-                  Leia Mais
-                </button>
-              </div>
-            </div>
-          </section>
+          <PrincipaisProdutos />
 
           {/* <!-- Assistências técnicas --> */}
-          <section className="max-w-full w-mobile md:w-tablet lg:w-desktop">
-            <header className="mb-14 md:w-[475px] lg:w-[600px]">
-              <h2 className="font-display text-xs md:text-base font-bold text-blue uppercase tracking-[0.3rem] pl-0.5 -mb-1.5">
-                Assistência
-              </h2>
-              <h1 className="font-display text-2xl md:text-3xl font-semibold">
-                Nossas assistências técnicas
-              </h1>
-              <p className="text-xs md:text-base w-[290px] md:w-full">
-                Oferecemos assistência técnica para as principais marcas do
-                mercado.
-              </p>
-            </header>
-
+          <Sessao
+            subtitle="Assistência"
+            title="Nossas assistências técnicas"
+            description="Oferecemos assistência técnica para as principais marcas do mercado."
+          >
             <div className="flex gap-8 justify-center">
               <div className="bg-gradient-to-br from-blue w-[300px] h-[142px] p-[1px] rounded-xl">
                 <div className="bg-white dark:bg-whitebg rounded-xl px-2 flex justify-center w-full h-full">
@@ -144,24 +59,14 @@ const Home: React.FC = () => {
                 </div>
               </div>
             </div>
-          </section>
+          </Sessao>
 
           {/* <!-- Dados de confiança --> */}
-          <section className="max-w-full w-mobile md:w-tablet lg:w-desktop">
-            <header className="mb-14 md:w-[475px] lg:w-[600px]">
-              <h2 className="font-display text-xs md:text-base font-bold text-blue uppercase tracking-[0.3rem] pl-0.5 -mb-1.5">
-                Confiança
-              </h2>
-              <h1 className="font-display text-2xl md:text-3xl font-semibold">
-                Confiança construída em anos
-              </h1>
-              <p className="text-xs md:text-base w-[290px] md:w-full">
-                Confiada por centenas de clientes e várias multinacionais,
-                construídas em anos de serviços prestados para todas as
-                necessidades.
-              </p>
-            </header>
-
+          <Sessao
+            subtitle="Confiança"
+            title="Confiança construída em anos"
+            description="Confiada por centenas de clientes e diversas multinacionais, construídas em anos de serviços prestados para todas as necessidades."
+          >
             <div className="md:w-auto flex flex-row flex-wrap gap-8 justify-center">
               <div className="bg-gradient-to-br from-blue w-[320px] h-[240px] p-[1px] rounded-xl">
                 <div className="bg-white dark:bg-blackbg rounded-xl grid content-center px-6 h-full w-full">
@@ -208,23 +113,14 @@ const Home: React.FC = () => {
                 </div>
               </div>
             </div>
-          </section>
+          </Sessao>
 
           {/* <!-- Serviços --> */}
-          <section className="max-w-full w-mobile md:w-tablet lg:w-desktop">
-            <header className="mb-14 md:w-[475px] lg:w-[600px]">
-              <h2 className="font-display text-xs md:text-base font-bold text-blue uppercase tracking-[0.3rem] pl-0.5 -mb-1.5">
-                Serviços
-              </h2>
-              <h1 className="font-display text-2xl md:text-3xl font-semibold">
-                Excedemos as expectativas
-              </h1>
-              <p className="text-xs md:text-base w-[290px] md:w-full">
-                Prestamos serviços de qualidade e rapidez para solucionar o seu
-                problema.
-              </p>
-            </header>
-
+          <Sessao
+            subtitle="Serviços"
+            title="Excedemos as expectativas"
+            description="Prestamos serviços de qualidade e rapidez para solucionar o seu problema."
+          >
             <div className="lg:pl-12">
               <div className="gap-8 flex flex-row flex-wrap justify-center lg:justify-normal">
                 <div className="bg-gradient-to-br from-blue w-[320px] h-[364px] p-[1px] rounded-xl">
@@ -309,28 +205,23 @@ const Home: React.FC = () => {
                 </div>
               </div>
             </div>
-          </section>
+          </Sessao>
 
           {/* <!-- Maps --> */}
-          <section className="max-w-full w-mobile md:w-tablet lg:w-desktop">
+          <Sessao
+            title="Traga seu equipamento para nós"
+            subtitle="Localização"
+            description="Nos visite em nossa sede localizada no bairro do Barro duro, em Maceió-AL."
+          >
             <Map />
-          </section>
+          </Sessao>
 
           {/* <!-- Orçamentos --> */}
-          <section className="max-w-full w-mobile md:w-tablet lg:w-desktop">
-            <header className="mb-14 md:w-[475px] lg:w-[600px]">
-              <h2 className="font-display text-xs md:text-base font-bold text-blue uppercase tracking-[0.3rem] pl-0.5 -mb-1.5">
-                Orçamento
-              </h2>
-              <h1 className="font-display text-2xl md:text-3xl font-semibold">
-                Solicite um orçamento
-              </h1>
-              <p className="text-xs md:text-base w-[290px] md:w-full">
-                Nos envie o seu problema que iremos analisar e encontrar a
-                melhor solução.
-              </p>
-            </header>
-
+          <Sessao
+            subtitle="Orçamento"
+            title="Solicite um orçamento"
+            description="Nos envie o seu problema que iremos analisar e encontrar a melhor solução."
+          >
             <div className="flex items-end md:items-center pb-6 md:pb-0 pl-5 md:pl-12 lg:pl-16 text-whitebg bg-cover bg-center bg-[url('/banners/banner-orcamento-mobile.png')] md:bg-[url('/banners/banner-orcamento-tablet.png')] lg:bg-[url('/banners/banner-orcamento-desktop.png')] h-[425px] md:h-[296px] lg:h-[406px]">
               <div className="w-5/6 md:w-4/6 lg:w-1/2">
                 <h3 className="font-bold lg:text-2xl mb-6">
@@ -361,7 +252,7 @@ const Home: React.FC = () => {
                 </button>
               </div>
             </div>
-          </section>
+          </Sessao>
         </div>
       </div>
     </main>

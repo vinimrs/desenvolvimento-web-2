@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
           <Image
             src={item.image}
             alt="Imagem do banner"
-            layout="fill"
+            fill={true}
             className="-z-10 absolute object-cover"
           />
           <div className="h-full flex flex-nowrap flex-col md:flex-row items-center justify-center md:justify-between px-2 md:px-0 w-mobile md:w-tablet lg:w-desktop">

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IoMenuSharp } from 'react-icons/io5';
+import { IoCloseSharp, IoMenuSharp } from 'react-icons/io5';
 import BotaoTema from './BotaoMudarTema';
 import { usePathname } from 'next/navigation';
 import { IoIosArrowDown } from 'react-icons/io';
@@ -14,7 +14,11 @@ const MenuMobile: React.FC = () => {
         onClick={() => setMenuOpen(prev => !prev)}
         className="bg-blue text-whitebg w-menu text-left inline box-border px-4 py-3"
       >
-        <IoMenuSharp className="text-whitebg h-[32px] w-[32px] mr-4 inline" />
+        {isMenuOpen ? (
+          <IoCloseSharp className="text-whitebg h-[32px] w-[32px] mr-4 inline" />
+        ) : (
+          <IoMenuSharp className="text-whitebg h-[32px] w-[32px] mr-4 inline" />
+        )}
         <span className="font-semibold text-base align-middle">Menu</span>
       </button>
 

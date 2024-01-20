@@ -52,7 +52,7 @@ const Cabecalho: React.FC = () => {
               </a>
             </div>
             <div className="text-center ml-4">
-              <FaWhatsapp className="w-4 h-4 inline mr-1" />
+              <FaWhatsapp className="w-[18px] h-[18px] inline mr-1" />
               <a href="tel:+5582993165234" className="align-middle">
                 (82) 9 9316-5234
               </a>
