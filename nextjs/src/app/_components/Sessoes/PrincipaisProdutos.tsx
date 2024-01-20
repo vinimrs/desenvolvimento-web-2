@@ -78,20 +78,9 @@ const PrincipaisProdutos: React.FC = () => {
   const handleRightArrow = () => {
     const over = width < 769 ? 0 : width < 1024 ? 1 : 3;
     const jump = 240 + 12;
-    console.log(jump);
 
     let x = scrollx - jump;
     const listWidth = list.length * 240;
-    console.log(
-      'x',
-      x,
-      'listWidth',
-      listWidth,
-      'width',
-      width,
-      'result',
-      listWidth - over * jump
-    );
     if (-x > listWidth - over * jump) {
       x += jump;
     }

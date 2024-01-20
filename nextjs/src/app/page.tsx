@@ -8,6 +8,7 @@ import { FiArrowRight, FiArrowUpRight } from 'react-icons/fi';
 import dynamic from 'next/dynamic';
 import Sessao from './_components/Sessao';
 import PrincipaisProdutos from './_components/Sessoes/PrincipaisProdutos';
+import Assistencias from './_components/Sessoes/Assistencias';
 
 const Map = dynamic(() => import('./_components/Map'), { ssr: false });
 
@@ -29,37 +30,7 @@ const Home: React.FC = () => {
           <PrincipaisProdutos />
 
           {/* <!-- Assistências técnicas --> */}
-          <Sessao
-            subtitle="Assistência"
-            title="Nossas assistências técnicas"
-            description="Oferecemos assistência técnica para as principais marcas do mercado."
-          >
-            <div className="flex gap-8 justify-center">
-              <div className="bg-gradient-to-br from-blue w-[300px] h-[142px] p-[1px] rounded-xl">
-                <div className="bg-white dark:bg-whitebg rounded-xl px-2 flex justify-center w-full h-full">
-                  <img src="/brands/schineider.svg" className="w-[220px]" />
-                </div>
-              </div>
-
-              <div className="hidden md:block bg-gradient-to-br from-blue w-[300px] h-[142px] p-[1px] rounded-xl">
-                <div className="bg-white dark:bg-whitebg rounded-xl px-2 flex justify-center w-full h-full">
-                  <img src="/brands/buffalo.svg" className="w-[220px]" />
-                </div>
-              </div>
-
-              <div className="hidden lg:block bg-gradient-to-br from-blue w-[300px] h-[142px] p-[1px] rounded-xl">
-                <div className="bg-white dark:bg-whitebg rounded-xl px-2 flex justify-center w-full h-full">
-                  <img src="/brands/toyama.svg" className="w-[220px]" />
-                </div>
-              </div>
-
-              <div className="hidden bg-gradient-to-br from-blue w-[300px] h-[142px] p-[1px] rounded-xl">
-                <div className="bg-white dark:bg-whitebg rounded-xl px-2 flex justify-center w-full h-full">
-                  <img src="/brands/tramontina.svg" className="w-[220px]" />
-                </div>
-              </div>
-            </div>
-          </Sessao>
+          <Assistencias />
 
           {/* <!-- Dados de confiança --> */}
           <Sessao
